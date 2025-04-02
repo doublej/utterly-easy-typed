@@ -6,7 +6,7 @@ Planned: Better Language (Dutch) support and TTS confirmation of mode switching.
   
   
 ```mermaid  
-graph Flow
+graph TD
     A[User Holds Hotkey] --> B[Audio Capture Starts]
     B --> C[User Speaks]
     C --> D[Audio is sent in chunks to configured OpenAI or Speaches server]
