@@ -1,8 +1,15 @@
 # Utterly Easy Typed ([demo](https://www.youtube.com/watch?v=eSDYIFzU_fY))  
 [<img src="./assets/sample_terminal.png" alt="alt text" style="width: 300px;" align="right"/>](./assets/sample_terminal.png)  
-Fork of the beautifully basic and transparent [Uttertype](https://github.com/dhruvyad/uttertype) dictation tool. The additions are basic voice command detection to activate post-processing modes without changing anything but the words spoken.  
+Fork of the beautifully basic and transparent [Uttertype](https://github.com/dhruvyad/uttertype) dictation tool.
+
+Added features:
+- basic voice command detection to decide which of the modes to use
+- post-processing modes to clean or format text how you require
+- bit more insight into what's happening through the UI.
   
-Planned: Better Language (Dutch) support and TTS confirmation of mode switching.  
+Planned:
+- [ ] Better Language (Dutch) support 
+- [ ] TTS confirmation of mode switching.  
   
   
 ```mermaid  
