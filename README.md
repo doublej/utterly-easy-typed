@@ -1,4 +1,4 @@
-# Utterly Easy Typed ([demo](https://www.youtube.com/watch?v=eSDYIFzU_fY))  
+# Utterly Easy Typed  
 [<img src="./assets/sample_terminal.png" alt="alt text" style="width: 300px;" align="right"/>](./assets/sample_terminal.png)  
 Fork of the beautifully basic and transparent [Uttertype](https://github.com/dhruvyad/uttertype) dictation tool.
 
