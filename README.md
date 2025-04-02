@@ -1,23 +1,27 @@
-# uttertype ([demo](https://www.youtube.com/watch?v=eSDYIFzU_fY))
+# Utterly Easy Typed ([demo](https://www.youtube.com/watch?v=eSDYIFzU_fY))
 
 <img src="./assets/sample_terminal.png" alt="alt text" style="width: 500px;"/>
 
 ## Setup
 
 ### 1. [Install PortAudio/PyAudio](https://people.csail.mit.edu/hubert/pyaudio/)
+
 #### macOS
 Installing portaudio on macOS can be somewhat tricky, especially on M1+ chips. In general, using conda seems to be the safest way to install portaudio
 ```
 conda install portaudio
 ```
+
 #### Windows
 ```
 python -m pip install pyaudio
 ```
+
 #### Linux
 ```
 sudo apt-get install python3-pyaudio
 ```
+
 ### 2. Add a HotKey
 For macOS, the hotkey is automatically set to the globe key by default (&#127760; bottom left key). For Windows and Linux, you can configure the hotkey by setting the `UTTERTYPE_RECORD_HOTKEYS` environment variable in `.env`:
 ```env
@@ -133,11 +137,16 @@ uttertype now includes text filtering capabilities that process your transcribed
 
 ### Available Filter Modes
 
-- **raw**:                No modification to the transcribed text
-- **code**:               Converts text to snake_case, ideal for coding
-- **code_formatter**:     Converts natural language to working code
-- **grammar**:            Corrects grammar and improves text readability
-- **helper**:             Smoothes out bumpy transcription results
+- **raw**: No modification to the transcribed text
+- **code**: Converts text to snake_case, ideal for coding
+- **clean**: Lowercases text and removes special characters
+
+### LLM-Based Filters
+
+For more advanced text transformations, uttertype supports Ollama-based filters:
+
+- **code_formatter**: Converts natural language to working code
+- **grammar**: Corrects grammar and improves text readability
 
 ### Environment Variables for Ollama Filters
 
