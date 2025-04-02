@@ -6,3 +6,9 @@ pyperclip
 python-dotenv
 rich
 webrtcvad
+httpx>=0.24.0
+pytest
+pytest-asyncio
+mock
+aiohttp
+asyncio

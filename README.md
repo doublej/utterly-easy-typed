@@ -126,3 +126,39 @@ When the program first runs, you will likely need to give it sufficient permissi
 
 ## Usage
 To start transcription, press and hold the registered hotkey to start recording. To stop the recording, lift your registered hotkey. On macOS, the registered hotkey is the globe icon by default. For other operating systems, this will have to by manually configured in `main.py` as described earlier.
+
+## Text Filtering
+
+uttertype now includes text filtering capabilities that process your transcribed text according to different modes:
+
+### Available Filter Modes
+
+- **raw**:                No modification to the transcribed text
+- **code**:               Converts text to snake_case, ideal for coding
+- **code_formatter**:     Converts natural language to working code
+- **grammar**:            Corrects grammar and improves text readability
+- **helper**:             Smoothes out bumpy transcription results
+
+### Environment Variables for Ollama Filters
+
+You can customize Ollama filter behavior with these environment variables:
+
+```env
+# Base Ollama settings
+OLLAMA_BASE_URL="http://localhost:11434"
+OLLAMA_TIMEOUT="10"
+OLLAMA_USE_CHAT_API="true"
+
+# Model selection
+OLLAMA_MODEL="llama3:8b"  # Default model
+OLLAMA_CODE_MODEL="codellama:7b-instruct"  # For code generation
+OLLAMA_GRAMMAR_MODEL="llama3:8b"  # For grammar correction
+
+# Parameters
+OLLAMA_CODE_TEMP="0.1"
+OLLAMA_CODE_TOP_P="0.9"
+OLLAMA_CODE_TOP_K="40"
+OLLAMA_GRAMMAR_TEMP="0.3"
+```
+
+These settings can be added to your `.env` file.
